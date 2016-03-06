@@ -66,6 +66,12 @@ function reportPopup(e){
     $(".report-problem-popup").addClass("popupOpen");
 };
 
+function sellRentPopup(e){
+    e.preventDefault();
+    $("#overlay").show();
+    $(".sell-rent-popup").addClass("popupOpen");
+};
+
 /* popup close function */
 function PopupClose() {
     $("#overlay").hide();
@@ -105,6 +111,7 @@ $(function(){
     $(".max-container > li").on("click", priceSelectionMax);
     $(".contact-agent").on("click", contactAgentPopup);
     $(".problem-report").on("click", reportPopup);
+    $(".sell-rent-prop").on("click", sellRentPopup);
     $(".contact-close, .report-cancel").on("click", PopupClose);
     $(document).on("click", outsideDpClick);
     $(document).on("click", outsideShortingClick);
